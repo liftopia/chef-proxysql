@@ -301,9 +301,7 @@ class Chef
       end
 
       def install_proxysql
-        v = package_version
-        package 'proxysql' do
-          version v if new_resource.lock_version
+        package 'proxysql2' do
         end
 
         service 'proxysql' do
